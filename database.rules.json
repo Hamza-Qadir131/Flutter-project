@@ -1,0 +1,37 @@
+{
+  "rules": {
+    "doctors": {
+      "$doctorId": {
+        ".read": "auth != null && (auth.uid === $doctorId || root.child('doctors').child(auth.uid).exists())",
+        ".write": "auth != null && auth.uid === $doctorId",
+        "profile": {
+          ".read": "auth != null && (auth.uid === $doctorId || root.child('doctors').child(auth.uid).exists())",
+          ".write": "auth != null && auth.uid === $doctorId"
+        }
+      }
+    },
+    "patients": {
+      ".read": true,
+      "$patientId": {
+        ".read": true,
+        ".write": "auth != null && auth.uid === $patientId",
+        "profile": {
+          ".read": true,
+          ".write": "auth != null && auth.uid === $patientId"
+        },
+        "logs": {
+          ".read": true,
+          ".write": "auth != null && auth.uid === $patientId"
+        },
+        "waterIntake": {
+          ".read": true,
+          ".write": "auth != null && auth.uid === $patientId"
+        },
+        "sleepDuration": {
+          ".read": true,
+          ".write": "auth != null && auth.uid === $patientId"
+        }
+      }
+    }
+  }
+} 

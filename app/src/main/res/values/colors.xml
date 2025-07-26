@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary colors -->
+    <color name="primary">#2196F3</color>
+    <color name="primary_dark">#1976D2</color>
+    <color name="primary_light">#BBDEFB</color>
+
+    <!-- Accent colors -->
+    <color name="accent">#FF4081</color>
+    <color name="accent_dark">#F50057</color>
+    <color name="accent_light">#FF80AB</color>
+
+    <!-- Text colors -->
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="text_tertiary">#9E9E9E</color>
+
+    <!-- Background colors -->
+    <color name="background">#F5F5F5</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="card_background">#FFFFFF</color>
+
+    <!-- Status colors -->
+    <color name="success">#4CAF50</color>
+    <color name="warning">#FFC107</color>
+    <color name="error">#F44336</color>
+    <color name="info">#2196F3</color>
+
+    <!-- Progress colors -->
+    <color name="progress_background">#E0E0E0</color>
+    <color name="progress_primary">@color/primary</color>
+    <color name="progress_secondary">@color/accent</color>
+
+    <!-- Ripple effect -->
+    <color name="ripple">#1F000000</color>
+
+    <!-- Common colors -->
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+    <color name="transparent">#00000000</color>
+
+    <!-- Health metrics colors -->
+    <color name="steps_color">#2196F3</color>
+    <color name="steps_color_light">#E3F2FD</color>
+    <color name="water_color">#00BCD4</color>
+    <color name="water_color_light">#E0F7FA</color>
+    <color name="sleep_color">#673AB7</color>
+    <color name="sleep_color_light">#EDE7F6</color>
+    <color name="emergency_color">#F44336</color>
+
+    <!-- Settings icons backgrounds -->
+    <color name="notification_bg">#E3F2FD</color>
+    <color name="notification_icon">#2196F3</color>
+    <color name="emergency_bg">#FCE4EC</color>
+    <color name="emergency_icon">#E91E63</color>
+    <color name="privacy_bg">#E8F5E9</color>
+    <color name="privacy_icon">#4CAF50</color>
+    <color name="success_light">#E8F5E9</color>
+
+    <!-- Material Design colors -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+    <color name="primary_color">#2196F3</color>
+
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#BDBDBD</color>
+    <color name="gray">#757575</color>
+</resources>

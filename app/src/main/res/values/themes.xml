@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.HealthCare" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.HealthCare" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primary_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/accent</item>
+        <item name="colorSecondaryVariant">@color/accent_dark</item>
+        <item name="colorOnSecondary">@color/white</item>
+        
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/primary_dark</item>
+        
+        <!-- Custom styles -->
+        <item name="materialCardViewStyle">@style/Widget.HealthCare.CardView</item>
+        <item name="materialButtonStyle">@style/Widget.HealthCare.Button</item>
+        <item name="textInputStyle">@style/Widget.HealthCare.TextInputLayout</item>
+        
+        <!-- Text appearance -->
+        <item name="textAppearanceHeadline1">@style/TextAppearance.HealthCare.Headline1</item>
+        <item name="textAppearanceHeadline2">@style/TextAppearance.HealthCare.Headline2</item>
+        <item name="textAppearanceBody1">@style/TextAppearance.HealthCare.Body1</item>
+        <item name="textAppearanceBody2">@style/TextAppearance.HealthCare.Body2</item>
+        
+        <!-- Window background -->
+        <item name="android:windowBackground">@color/background</item>
+        
+        <!-- Navigation bar -->
+        <item name="android:navigationBarColor">@color/primary_dark</item>
+    </style>
+
+    <!-- Card style -->
+    <style name="Widget.HealthCare.CardView" parent="Widget.MaterialComponents.CardView">
+        <item name="cardElevation">4dp</item>
+        <item name="cardCornerRadius">16dp</item>
+        <item name="cardBackgroundColor">@color/white</item>
+        <item name="rippleColor">@color/ripple</item>
+        <item name="cardPreventCornerOverlap">true</item>
+        <item name="contentPadding">16dp</item>
+    </style>
+
+    <!-- Button style -->
+    <style name="Widget.HealthCare.Button" parent="Widget.MaterialComponents.Button">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:paddingStart">24dp</item>
+        <item name="android:paddingEnd">24dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="cornerRadius">24dp</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!-- Text Input style -->
+    <style name="Widget.HealthCare.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxCornerRadiusTopStart">12dp</item>
+        <item name="boxCornerRadiusTopEnd">12dp</item>
+        <item name="boxCornerRadiusBottomStart">12dp</item>
+        <item name="boxCornerRadiusBottomEnd">12dp</item>
+        <item name="boxStrokeColor">@color/primary</item>
+        <item name="hintTextColor">@color/primary</item>
+    </style>
+
+    <!-- Text styles -->
+    <style name="TextAppearance.HealthCare.Headline1" parent="TextAppearance.MaterialComponents.Headline1">
+        <item name="android:textSize">32sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="TextAppearance.HealthCare.Headline2" parent="TextAppearance.MaterialComponents.Headline2">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="TextAppearance.HealthCare.Body1" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="TextAppearance.HealthCare.Body2" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+</resources>

@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/surface"
+        app:elevation="0dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Health Dashboard"
+            android:textAppearance="?attr/textAppearanceHeadline1"
+            android:padding="16dp"
+            android:layout_marginTop="8dp"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Steps Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/stepsCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardElevation="2dp"
+                app:cardCornerRadius="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/ic_directions_walk"
+                            android:layout_marginEnd="16dp"
+                            android:tint="@color/steps_color"
+                            android:contentDescription="Steps icon"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Steps Today"
+                            android:textAppearance="?attr/textAppearanceHeadline2"/>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/resetStepsButton"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Reset"
+                            app:icon="@drawable/ic_refresh"
+                            app:iconTint="@color/text_secondary"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/stepsText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0 steps"
+                        android:textAppearance="?attr/textAppearanceHeadline2"
+                        android:textColor="@color/steps_color"
+                        android:layout_marginTop="8dp"/>
+
+                    <com.google.android.material.progressindicator.LinearProgressIndicator
+                        android:id="@+id/stepProgressBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        app:trackCornerRadius="8dp"
+                        app:trackThickness="8dp"
+                        app:indicatorColor="@color/steps_color"
+                        app:trackColor="@color/progress_background"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Water Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/waterCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardElevation="2dp"
+                app:cardCornerRadius="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/ic_local_drink"
+                            android:layout_marginEnd="16dp"
+                            android:tint="@color/water_color"
+                            android:contentDescription="Water icon"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Water Intake"
+                            android:textAppearance="?attr/textAppearanceHeadline2"/>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/resetWaterButton"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Reset"
+                            app:icon="@drawable/ic_refresh"
+                            app:iconTint="@color/text_secondary"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/waterText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0 ml"
+                        android:textAppearance="?attr/textAppearanceHeadline2"
+                        android:textColor="@color/water_color"
+                        android:layout_marginTop="8dp"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/addLargeButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Add Water (250ml)"
+                        app:backgroundTint="@color/water_color"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Sleep Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/sleepCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardElevation="2dp"
+                app:cardCornerRadius="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/ic_bedtime"
+                            android:layout_marginEnd="16dp"
+                            android:tint="@color/sleep_color"
+                            android:contentDescription="Sleep icon"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Sleep Duration"
+                            android:textAppearance="?attr/textAppearanceHeadline2"/>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/resetSleepButton"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Reset"
+                            app:icon="@drawable/ic_refresh"
+                            app:iconTint="@color/text_secondary"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/sleepStatusText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0 hours"
+                        android:textAppearance="?attr/textAppearanceHeadline2"
+                        android:textColor="@color/sleep_color"
+                        android:layout_marginTop="8dp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Emergency Section -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Emergency"
+                android:textAppearance="?attr/textAppearanceHeadline2"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"/>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/addButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="EMERGENCY"
+                android:textSize="18sp"
+                android:padding="16dp"
+                app:icon="@drawable/ic_warning"
+                app:backgroundTint="@color/emergency_color"
+                app:cornerRadius="12dp"
+                android:elevation="4dp"/>
+
+            <TextView
+                android:id="@+id/emergencyStatusText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                android:padding="8dp"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                android:background="@drawable/emergency_status_background"
+                android:layout_below="@id/addButton"
+                android:elevation="4dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/addContactButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Manage Emergency Contacts"
+                app:icon="@drawable/ic_contacts"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                app:strokeColor="@color/emergency_color"
+                app:iconTint="@color/emergency_color"
+                android:textColor="@color/emergency_color"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Emergency Status Overlay -->
+    <FrameLayout
+        android:id="@+id/emergencyOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:visibility="gone"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:cardBackgroundColor="#FFEBEE"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp"
+            app:strokeColor="@android:color/holo_red_light"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_warning"
+                    android:tint="@android:color/holo_red_dark"
+                    android:layout_marginEnd="16dp"/>
+
+                <TextView
+                    android:id="@+id/emergencyStatusText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="16dp"
+                    android:visibility="gone"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </FrameLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
